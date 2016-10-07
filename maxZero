@@ -1,0 +1,23 @@
+package javaapplication13;
+
+/**
+ *
+ * @author Jaedin Laptop
+ */
+public class JavaApplication13 {
+
+    public static void main(String[] args) {
+        int[] num={0,2,9,0,4,5,2,7,0,0,1};
+        int c=0;
+        for(int a=0; a<num.length-1;a++){
+            if(num[a]==0){
+                for(int b=a;b<num.length;b++){
+                    if(num[b]%2!=0 && num[b]>c)
+                       c=num[b];
+                }
+                num[a]=c;
+                c=0;
+            }
+            System.out.print(num[a]);
+        }             
+    } 
